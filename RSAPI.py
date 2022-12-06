@@ -1,8 +1,7 @@
 #!/usr/bin/python
 """
-Manage resources on Resourcespace through the REST API. T
+Manage resources on Resourcespace through the REST API.
 Author: Emily O'Dean
-Adapted from Xuenan Pi
 """
 
 import hashlib
@@ -17,7 +16,7 @@ class RSAPI(object):
     def __init__(self, user, private_key):
         self.site_ip = "collections.nbmg.unr.edu/"
         # user name and private key
-        # user can only create collection for himself
+        # user can only create collection for oneself
         # to create a collection for a user, the user's account name and private key has to be used
         self.user = user
         self.private_key = private_key
@@ -142,13 +141,3 @@ class RSAPI(object):
 if __name__=="__main__":
     user = ""
     private_key = ""
-    test = RSAPI.RSAPI(user, private_key)
-    response = test.get_resource("")
-    
-
-
-
-    #test.upload_resource("/home/bitnami/test/MaidwiththeFlaxenHair.mp3", "testmusictitle", "8")
-    # print test.get_resource_folder("13", "mp3")
-    # test.delete_resource("15")
-    # print test.create_collection("col1")
